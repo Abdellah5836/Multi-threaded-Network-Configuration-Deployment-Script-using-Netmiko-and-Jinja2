@@ -1,0 +1,10 @@
+{% for entry in entries -%}
+hostname {{entry['hostname'] }}
+{% for list01 in entry['interfaces'] -%}
+interface {{list01['int_name']}}
+{{ list01['switchport'] }}
+ip address {{ list01['ip_address'] }} {{ list01['subnet_mask'] }}
+description connected to {{ list01['description'] }}
+no shutdown
+{% endfor %}
+{% endfor -%}
