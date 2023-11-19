@@ -1,0 +1,55 @@
+entries:
+  - hostname: R1
+    interfaces:
+    - int_name: f2/0
+      switchport: no switchport
+      description: Service_Interface_1
+      ip_address: 172.16.10.10
+      subnet_mask: 255.255.255.0
+    - int_name: f2/1
+      switchport: no switchport
+      description: MGMT_Interface_1
+      ip_address: 10.0.0.10
+      subnet_mask: 255.255.255.0
+    - int_name: f2/2
+      switchport: no switchport
+      description: Dowlink_Interface_1
+      ip_address: 1.1.1.1
+      subnet_mask: 255.255.255.0
+
+  - hostname: SW1
+    interfaces:
+    - int_name: eth1/0
+      switchport: no switchport
+      description: Service_Interface_2
+      ip_address: 172.16.10.20
+      subnet_mask: 255.255.255.0
+    - int_name: eth1/1
+      switchport: no switchport
+      description: MGMT_Interface_2
+      ip_address: 10.0.0.20
+      subnet_mask: 255.255.255.0
+    - int_name: eth1/2
+      switchport: no switchport
+      description: Dowlink_Interface_2
+      ip_address: 1.1.1.2
+      subnet_mask: 255.255.255.0
+
+  - hostname: SW2
+    interfaces:
+    - int_name: eth1/0
+      switchport: no switchport
+      description: Service_Interface_3
+      ip_address: 172.16.10.30
+      subnet_mask: 255.255.255.0
+    - int_name: eth1/1
+      switchport: no switchport
+      description: MGMT_Interface_3
+      ip_address: 10.0.0.30
+      subnet_mask: 255.255.255.0
+    - int_name: eth1/2
+      switchport: no switchport
+      description: Dowlink_Interface_3
+      ip_address: 1.1.1.3
+      subnet_mask: 255.255.255.0
+      
