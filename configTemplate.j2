@@ -1,10 +1,15 @@
 {% for entry in entries -%}
 hostname {{entry['hostname'] }}
-{% for list01 in entry['interfaces'] -%}
-interface {{list01['int_name']}}
-{{ list01['switchport'] }}
-ip address {{ list01['ip_address'] }} {{ list01['subnet_mask'] }}
-description connected to {{ list01['description'] }}
-no shutdown
+{% for item in entry['interfaces'] -%}
+interface {{item['int_name']}}
+{{ item['switchport'] }}
+{% if item['ip_address'] %}
+ip address {{ item['ip_address'] }} {{ item['subnet_mask'] }}
+{% endif %}
+description connected to {{ item['description'] }}
+{% if item['active'] %}
+no
+{% endif %}
+shutdown
 {% endfor %}
 {% endfor -%}
